@@ -13,10 +13,10 @@ package entity.menu {
 		private var angleY:Number = 4;
 
 		public function Fon() {
-			image = new Image(GFX.MenuFon); //создаем картинку, заметьте что в качестве класса с графикой мы указываем графику из класса GFX
+			image = new Image(GFX.MenuFon); //мы указываем графику из класса GFX
 			imageMask = new Stamp(GFX.MenuMask, 0, 0); //создаем маску
 			
-			txt = new Text("BRICK JUMP", 0,0,200,50); //черный текст "BRICK JUMP" на картинке 
+			txt = new Text("GALAXY JUMP", 0,0,200,50); 
 			txt.color = 0x000000;
 			txt.size = 32;
 			txt.x = (image.width - txt.width) / 2;

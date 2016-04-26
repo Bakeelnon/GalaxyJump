@@ -1,9 +1,11 @@
 package entity {
 	import flash.geom.Point;
+	
 	import net.flashpunk.Entity;
-	import net.flashpunk.graphics.Image;
 	import net.flashpunk.FP;
 	import net.flashpunk.Sfx;
+	import net.flashpunk.graphics.Image;
+	import net.flashpunk.graphics.Spritemap;
 	import net.flashpunk.tweens.misc.NumTween;
 	import net.flashpunk.utils.Input;
 	import net.flashpunk.utils.Key;
@@ -33,6 +35,7 @@ package entity {
 			Input.define("leftDefine", Key.A, Key.LEFT);
 			Input.define("rightDefine", Key.D, Key.RIGHT);
 		}
+		
 
 		public function alphaTween():void {
 			flagTween = true;

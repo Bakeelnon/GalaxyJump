@@ -8,11 +8,11 @@ package {
 	public class Game extends Engine {
 		private var aScores:Array = [10, 9, 8, 7, 6]; //начальные очки игрока
 		private var aName:Array = ["redefy", "redefy", "redefy", "redefy", "redefy"]; //имена лучших игроков
-		/* В дальнейшем мы создадим меню с таблицей лучших игроков, для этого мы будем использовать SharedObject
-		 * В этих двух массивах хранятся начальные имена и очки игроков */
+		// создадим меню с таблицей лучших игроков, для этого мы будем использовать SharedObject
+		// * В этих двух массивах хранятся начальные имена и очки игроков */
 		 
 		public function Game ():void {
-			super(400, 480, 60, false); //вызываем конструктор класса Engine
+			super(400, 480, 60, false); //конструктор класса Engine
 		}
 		
 		override public function init():void {

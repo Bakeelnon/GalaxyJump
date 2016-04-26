@@ -27,7 +27,7 @@ package entity{
 			this.name = name;
 			this.hero = hero;
 			 
-			if (!nameSprite) { //если не указано имя спрайта создаем статичный кирпич
+			if (!nameSprite) { //если не указано имя спрайта создаем статичный скай
 				image = new Image(source);
 				graphic = image;
 				setHitbox(image.width, 2);
@@ -51,13 +51,13 @@ package entity{
 			type = "brick";
 		}
 		
-		public function  tweenAlpha():void { //твин для исчезающего кирпича
+		public function  tweenAlpha():void { //твин для исчезающего ская
 			alphaTween = new NumTween(completeTween);
 			alphaTween.tween(1, 0, 0.5);
 			addTween(alphaTween,true);
 		}
 		
-		public function  tweenyY():void { //твин для ломающегося кирпича
+		public function  tweenyY():void { //твин для ломающегося ская
 			yTween = new NumTween(completeTween);
 			yTween.tween(y, y+300, 0.5);
 			addTween(yTween,true);
@@ -69,7 +69,7 @@ package entity{
 				if (flagFour) tweenFour();
 				if (flagFive) tweenFive();
 				
-				if (hero.y+hero.height+10 < y) flag = true; //еслт игрок находится над кирпичом флаг = true
+				if (hero.y+hero.height+10 < y) flag = true; //еслт игрок находится над скаем флаг = true
 				else if (hero.y > y) flag = false; //иначе false
 		}
 		
@@ -78,12 +78,12 @@ package entity{
 			FP.world.remove(this);
 		}
 		
-		private function  tweenFour():void { //твин для горизонтально движущегося кирпича
+		private function  tweenFour():void { //твин для горизонтально движущегося ская
 			fooFour += num;
 			x = Math.cos (fooFour) * 50 + xEntity;
 		}
 		
-		private function  tweenFive():void { //твин для виртикально движущегося кирпича
+		private function  tweenFive():void { //твин для виртикально движущегося ская
 			fooFive += num;
 			y = Math.cos (fooFive) * 70 + yEntity;
 		}
